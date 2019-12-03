@@ -13,7 +13,7 @@ export class NavComponent implements OnInit {
   photoUrl: string;
 
   constructor(
-    public authService: AuthService, 
+    public authService: AuthService,
     private alertify: AlertifyService,
     private router: Router) { }
 
@@ -42,9 +42,10 @@ export class NavComponent implements OnInit {
 
     this.authService.decodedToken = null;
     this.authService.currentUser = null;
-    
+
     this.alertify.message('Logged out.');
-    this.router.navigate['/home'];
+
+    this.router.navigate(['/home']);
   }
 
 }
